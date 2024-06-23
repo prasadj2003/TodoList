@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-
-mongoose.connect("<your URL here>");
+require('dotenv').config();
+const MONGO_URI = process.env.MONGO_URI;
+mongoose.connect(MONGO_URI);
 
 const todoSchema = new mongoose.Schema({
     title: String,
