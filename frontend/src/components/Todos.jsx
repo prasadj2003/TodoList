@@ -8,7 +8,7 @@
 // ]
 
 
-export function Todos({ todos }) {
+export function Todos({ todos = [] }) {
     return (
         <div className="border-2 border-gray-300 rounded-lg p-4 space-y-4">
             {todos.map((todo) => (
